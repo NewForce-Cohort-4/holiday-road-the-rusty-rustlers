@@ -7,3 +7,8 @@
 
 import {ParkSelect } from "./parks/ParkSelect.js";
 ParkSelect()
+console.log("hello,world")
+
+import { attractionSelect } from './attractions/attractionSelect.js'
+
+attractionSelect()
