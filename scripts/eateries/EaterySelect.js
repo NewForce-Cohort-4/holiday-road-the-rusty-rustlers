@@ -42,6 +42,7 @@ eventHub.addEventListener("change", (eateryObject) => {
         document.querySelector(".eateries-preview").innerHTML = selectedEatery
     })
     document.querySelector(".eateries-preview").innerHTML = ""
+    document.querySelector(".eateries-more-details").innerHTML = ""
 })
 
 // listening function for when the more details button is selected 
@@ -49,8 +50,9 @@ document.querySelector(".eateries-preview").addEventListener("click", (detailsOb
     console.log(detailsObject.target.id)
     let eateryHTML = ""
     if(detailsObject.target.id.includes("eateries--")){
-// get the amenities to appear in the console when the More Details button is clicked
-// .split will seperate the id and .pop() will give me just the targeted items id   
+    // get the amenities to appear in the console when the More Details button is clicked
+    // .split will seperate the id and .pop() will give me just the targeted items id   
+        
         const idOfEateryClicked = detailsObject.target.id.split("--").pop()
         const allTheEateries = useEateries()
         const matchingEatery = allTheEateries.find((singleEateryInLoop) => {
@@ -60,9 +62,6 @@ document.querySelector(".eateries-preview").addEventListener("click", (detailsOb
         console.log("this should be the matching eateries ameneties", matchingEatery)
         
        // print the ameneties to the correct div
-        document.querySelector(".eateries-more-details").innerHTML = eateryDetails(matchingEatery)
+        document.querySelector(".eateries-more-details").innerHTML = eateryDetails(matchingEatery)       
     }
-
-}
-
-)
+})
