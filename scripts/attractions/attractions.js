@@ -1,3 +1,4 @@
+//function when dropdown item is selected from the list 
 export function attractionInfo(attractionObject){
     return `
     <section class="DOMAttraction">
@@ -8,13 +9,22 @@ export function attractionInfo(attractionObject){
     `
 }
 
+//function that runs when more details button is pressed 
 export function attractionMoreDetails(attractionObject){
     let attractionHTML = `
-    <section class="attraction-preview">
     <p>${attractionObject.city}, ${attractionObject.state}</p>
-    <p>Souvenirs: ${attractionObject.ameneties.souvenirs} </p>
-    <p>Restrooms: ${attractionObject.ameneties.restrooms}</p>
-    </section>
     `
-    return attractionHTML
+
+    if(attractionObject.ameneties.souvenirs === true){
+        attractionHTML += "<p>Souvenirs: Yes, there is a gift shop!</p>"
+    } else {
+        attractionHTML += "<p>Souvenirs: None</p>"
+    } 
+    if(attractionObject.ameneties.restrooms === true){
+        attractionHTML += "<p>Restrooms: Yes</p>"
+    } else {
+        attractionHTML += "<p>Restrooms: None, it is recommended that you stop before your visit!</p>"
+    }
+    
+    return `<section class="attraction-preview">${attractionHTML}</section`
 }
