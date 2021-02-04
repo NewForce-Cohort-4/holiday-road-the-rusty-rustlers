@@ -1,8 +1,10 @@
+import { getWeather } from '../weather/WeatherProvider.js'
 import { getAttractions, useAttractions } from './AttractionProvider.js'
 import { attractionInfo, attractionMoreDetails } from './attractions.js'
 
 const dropdownTarget = document.querySelector(".attraction-drop-down")
 
+//function imported to main.js for dropdown to appear 
 export const attractionSelect = () => {
     getAttractions().then(() => {
         const attractionsArray = useAttractions();
@@ -32,7 +34,6 @@ eventHub.addEventListener("change", (attractionObject) => {
         let allAttractions = useAttractions()
         for(let thisAttraction of allAttractions){
             if(attractionObject.target.value === thisAttraction.name){
-               
                 selectedAttraction += attractionInfo(thisAttraction)
             }
         }
