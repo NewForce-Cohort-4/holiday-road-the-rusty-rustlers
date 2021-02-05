@@ -1,0 +1,17 @@
+* {
+    background-color: lightyellow;
+}
+
+img {
+    max-width:100%;
+    height: 50vh;
+}
+
+.header{
+    text-align: center;
+}
+
+.drop-down-menu{
+    display: flex;
+    justify-content: left;
+}

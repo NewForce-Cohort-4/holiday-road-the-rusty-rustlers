@@ -27,7 +27,7 @@ const render = eateryCollection => {
 }
 
 //listening function when an item is selected from the eatery dropdown list and sends it into the itenierary preview section
-const eventHub = document.querySelector("main")
+const eventHub = document.querySelector(".eateries-drop-down")
 eventHub.addEventListener("change", (eateryObject) => {
     // console.log("you clicked somewhere in the main container")
     // console.log(eateryObject.target.value)
