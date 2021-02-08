@@ -75,6 +75,7 @@ const eventHub = document.querySelector(".park-drop-down")
    
     }
     
+    document.querySelector(".park-more-details").innerHTML = ""
 
 })
 
@@ -109,9 +110,9 @@ console.log("anything")
         <p> phoneNumber-1: ${matchingPark.contacts.phoneNumbers[0].phoneNumber}</p>`
         
 
-if (matchingPark.contacts.phoneNumbers[1].phoneNumber){
-    document.querySelector(".park-more-details").innerHTML +=
-    `<p> phoneNumber-2: ${matchingPark.contacts.phoneNumbers[1].phoneNumber}</p>`
+            if (matchingPark.contacts.phoneNumbers[1].phoneNumber){
+             document.querySelector(".park-more-details").innerHTML +=
+            `<p> phoneNumber-2: ${matchingPark.contacts.phoneNumbers[1].phoneNumber}</p>`
 }
         // document.querySelector(".park-more-details").innerHTML = ""
         
