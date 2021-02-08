@@ -3,7 +3,7 @@
 }
 
 img {
-    max-width:100%;
+    width: 100%;
     height: 50vh;
 }
 
@@ -13,5 +13,5 @@ img {
 
 .drop-down-menu{
     display: flex;
-    justify-content: left;
+    justify-content: center;
 }
